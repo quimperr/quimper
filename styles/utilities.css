@@ -1,0 +1,40 @@
+@media screen and (min-width: 0) and (max-width: 479px) {
+    .hide-smartphone {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 1023px) {
+    .hide-tablet {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .hide-desktop {
+        display: none;
+    }
+}
+
+.flex-spacer {
+    flex: 1;
+}
+
+.container {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+
+@media screen and (min-width: 480px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+.container:after {
+    content: "";
+    display: table;
+    clear: both;
+}

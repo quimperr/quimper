@@ -1,0 +1,284 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: arial;
+}
+
+/* Site section header */
+    #site-section-header {
+        background: #F4A460;
+        display: flex;
+    }
+
+    #site-section-header h2,
+    #site-section-header p {
+        color: white;
+        margin: 0;
+        padding: 15px;
+        text-transform: uppercase;
+    }
+
+    #site-section-header h2 {
+        margin: 0;
+        border-right: thin solid white;
+        padding: 8px 10px 6px 25px;
+        font-size: 16px;
+    }
+
+    #site-section-header p {
+        padding: 8px 0 0 10px;
+        font-size: 11px;
+    }
+
+/* Site header */
+    #site-header {
+        background: #00455C;
+        color: white;
+        display: flex;
+        padding: 2px 25px;
+        align-items: center;
+    }
+
+    #mobile-menu-trigger {
+        -webkit-appearance: none;
+        background: transparent;
+        border: none;
+        margin-right: 15px;
+    }
+
+    #mobile-menu-trigger img {
+        height: 29px;
+    }
+
+    #site-logo {
+        margin: 0 20px 0 0;
+        font-size: 36px;
+    }
+    #site-nav {
+        margin: 0;
+        padding: 0;
+        display: none;
+    }
+
+    @media screen and (min-width: 760px) {
+        #site-nav {
+            display: block;
+        }
+    }
+
+    #site-nav li {
+        display: inline-block;
+        margin: 0 10px;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+    #site-nav li a,
+    #site-nav li a:active {
+        color: white;
+        text-decoration: none
+    }
+
+    #site-search {
+        margin: 0 15px 0 0;
+        position: relative;
+        top: 2px;
+    }
+
+    #site-search input {
+        display: none;
+    }
+
+    #site-search .icon {
+        height: 16px;
+    }
+
+    #site-section-nav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-transform: uppercase;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+    #site-section-nav .icon {
+        height: 16px;
+        position: relative;
+        top: 3px;
+        margin-left: 3px;
+    }
+    #site-section-nav ul {
+        display: none;
+    }
+
+#section-location {
+    font-family: georgia;
+    font-weight: normal;
+    padding: 0 25px;
+    text-align: center;
+    font-size: 14px;
+    margin: 25px 0 15px 0;
+}
+
+@media screen and (min-width: 640px) {
+    #section-location {
+        text-align: right;
+        font-size: 18px;
+    }
+}
+
+#section-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 200;
+    position: relative;
+    margin: 0 auto 25px auto;
+    width: 210px;
+}
+
+@media screen and (min-width: 480px) {
+    #section-title {
+        margin: 0 auto 50px auto;
+    }
+}
+
+#section-title:after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    background: #FF4B46;
+    height: 2px;
+    left: 10px;
+    right: 10px;
+}
+
+#album-review-grid {
+    padding: 0;
+    list-style-type: none;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.album {
+    float: left;
+    width: 100%;
+    padding: 12.5px 12.5px 25px 12.5px;
+    margin-bottom: 25px;
+}
+
+@media screen and (min-width: 480px) {
+    .album {
+        width: calc(100% / 2);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .album {
+        width: calc(100% / 3);
+    }
+}
+
+.album__cover {
+    margin-bottom: 25px;
+    height: 220px;
+}
+
+@media screen and (min-width: 760px) {
+    .album__cover {
+        height: 290px;
+    }
+}
+
+.album__cover img {
+    max-width:100%;
+    max-height:100%;
+    height: auto;
+    width:auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.album__title,
+.album__name,
+.album__reviewer,
+.album__ago,
+.album__rating,
+.album__link {
+    text-align: center;
+}
+
+.album__title {
+    position: relative;
+    margin: 0 0 15px 0;
+}
+
+.album__title-inner {
+    display: inline-block;
+    margin: 0 auto;
+    position: relative;;
+}
+
+.album__title-inner:before,
+.album__title-inner:after {
+    content: " ";
+    position: absolute;
+    height: 1px;
+    background: black;
+    left: -10px;
+    right: -10px;
+    bottom: -5px;
+}
+
+.album__title-inner:after {
+    bottom: -7px;
+}
+
+.album__name {
+    margin: 0 0 15px 0;
+}
+
+.album__reviewer {
+    margin: 0 0 7px 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.album__ago {
+    margin: 0 0 10px 0;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: grey;
+}
+
+.album__rating {
+    margin-bottom: 5px;
+}
+
+.rating {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.rating__item {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: thin solid #FF2908;
+    border-radius: 50%;
+}
+.rating__item--starred {
+    background: #FF2908;
+}
+
+.album__link {
+    font-family: georgia;
+    display: block;
+    margin: 0 auto;
+    font-style: italic;
+    font-size: 19px;
+    text-decoration: none;
+    color: black;
+}
